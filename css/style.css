@@ -1,0 +1,52 @@
+.jumbotron {
+  padding: 20px 0;
+}
+
+.container {
+  position: relative;
+}
+
+.frame-background {
+  position: absolute;
+  width: 22vw;
+  height: 48vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50px;
+  background-color: white;
+  z-index: -1;
+}
+
+.frame {
+  display: inline-block;
+  width: 23.9vw;
+  height: 49vw;
+  margin: 0 auto;
+  background-image: url("../img/pngegg.png");
+  background-size: contain;
+  background-position: center;
+}
+
+.content {
+  display: inline-block;
+  margin-top: 3vw;
+  padding: 4vw 1vw;
+  width: 90%;
+  height: 90%;
+  color: #444;
+}
+
+.section {
+  margin-top: 50px;
+}
+
+#section1 {
+  padding-top: 10vw;
+}
+
+.next-btn {
+  font-size: 3em;
+}
