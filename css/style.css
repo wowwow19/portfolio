@@ -1,52 +1,133 @@
 .jumbotron {
-  padding: 20px 0;
-}
-
-.container {
-  position: relative;
-}
-
-.frame-background {
-  position: absolute;
-  width: 22vw;
-  height: 48vw;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border-radius: 50px;
-  background-color: white;
-  z-index: -1;
+  padding: 0;
 }
 
 .frame {
   display: inline-block;
-  width: 23.9vw;
-  height: 49vw;
-  margin: 0 auto;
-  background-image: url("../img/pngegg.png");
-  background-size: contain;
+  position: relative;
+  margin: auto;
   background-position: center;
+  background-repeat: no-repeat;
 }
+
+@media screen and (max-width: 479px) {
+  body {
+    font-size: 10px;
+  }
+
+  
+  .frame {
+    width: 86.7vw;
+    height: 178vw;
+    background-size: auto 100%;
+    background-image: url("../img/phone-frame.png");
+  }
+  
+  .frame-background {
+    position: absolute;
+    width: 95%;
+    height: 90%;
+    margin: 5% 2.5%;
+    border-radius: 50px;
+    background-color: white;
+    z-index: -1;
+  }
+
+  .section {
+    margin-top: 40%;
+  }  
+
+  #section1 {
+    margin-top: 70%;
+  }
+
+}
+
+@media screen and (min-width: 480px){
+  body {
+    font-size: 20px;
+  }
+
+  .frame {
+    width: 86.7vw;
+    height: 178vw;
+    background-image: url("../img/phone-frame.png");
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .frame {
+    width: 100%;
+    height: 90vh;
+    background-size: 100%;
+    background-image: url("../img/laptop-frame.png");
+  }
+
+  .section {
+    margin-top: 5%;
+    padding: 0 5%;
+  }  
+
+}
+
 
 .content {
   display: inline-block;
-  margin-top: 3vw;
-  padding: 4vw 1vw;
-  width: 90%;
-  height: 90%;
+  width: 80%;
   color: #444;
 }
 
-.section {
-  margin-top: 50px;
+
+.loading {
+  padding-top: 8vw;
+  width: 50%;
+  margin: 0 auto;
 }
 
-#section1 {
-  padding-top: 10vw;
+@keyframes loading-bar {
+  0% { width: 0 }
+  20% { width: 20% }
+  40% { width: 40% }
+  60% { width: 60% }
+  80% { width: 80% }
+  100% { width: 100% }
+}
+
+.profile-img {
+  width: 100px;
+  border-radius: 100%;
+}
+
+.progress {
+  margin-top: 20px;
+  height: 7px;
+}
+
+.progress-bar {
+  animation: loading-bar 5s;
 }
 
 .next-btn {
   font-size: 3em;
+}
+
+.welcome {
+  display: none;
+  font-size: 3em;
+}
+
+.welcome * {
+  margin: 0;
+}
+
+.welcome .main-title {
+  font-weight: 500;
+}
+
+.welcome .sub-title {
+  font-size: .8em;
+}
+
+.welcome .next-btn {
+  font-size: 2em;
 }
