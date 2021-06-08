@@ -20,8 +20,9 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -31,7 +32,7 @@
     <link rel="stylesheet" href="vendor/fullpage/jquery.fullPage.css">
     
     <!-- External JS -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
     <script src="vendor/bootstrap/popper.min.js"></script>
     <script src="vendor/bootstrap/bootstrap.min.js"></script>
     <script src="vendor/select2/select2.min.js "></script>
@@ -53,28 +54,234 @@
 </head>
 
 <body data-spy="scroll" data-target="#navbar" class="static-layout">
-    <div class="jumbotron d-flex align-items-center">
+    <div class="jumbotron d-flex align-items-center ">
         <div class="container text-center">
             <div class="frame">
                 <div class="frame-background"></div>
                 <div class="content" id="fullpage">
                     <div class="section fp-auto-height" id="section1">
+                        <div class="top-bar col-lg-12 px-1 d-none">
+                            <div class="service-info"><i class="fas fa-signal"></i></div>
+                            <div class="current-time"></div>
+                            <div><i class="fas fa-battery-three-quarters"></i></div>
+                        </div>
+
+                        <!-- 슬라이드 1 -->
                         <div class="slide" id="slide1" data-anchor="slide1">
-                            <div class="loading">
-                                <img class="profile-img shadow" alt="" src="img/profile.jpg">
-                                <div class="progress border">
-                                    <div class="progress-bar progress-bar-animated bg-dark" style="width: 10%"></div>
+                            <div class="slide-content">
+                                <!-- 로딩화면 -->
+                                <div class="loading">
+                                    <img class="profile-img shadow" alt="" src="img/profile.jpg">
+                                    <div class="progress border">
+                                        <div class="progress-bar progress-bar-animated bg-dark" style="width: 10%"></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="welcome">
-                                <p class="main-title text-left">환영합니다!</p>
-                                <p class="sub-title text-left">제 소개를 시작합니다.</p>
-                                <a href="#firstPage/1"><p class="next-btn text-right mt-3"><i class="fas fa-arrow-circle-right"></i></p></a>
+                                <!-- 초기화면 -->
+                                <div class="welcome">
+                                    <p class="main-title text-left"></p>
+                                    <p class="sub-title text-left">제 소개를 시작합니다.</p>
+                                </div>
+                            </div>    
+                        </div>
+
+                        <!-- 슬라이드 2 -->
+                        <div class="slide" id="slide2" data-anchor="slide2">
+                            <div class="slide-content">
+                                <ul class="info">
+                                    <li class="info-top mb-3">
+                                        <div class="info-name">
+                                            <span class="ko-name">전민우</span>
+                                            <p class="en-name">Minwoo, Jeon</p>
+                                            <hr>
+                                            <p class="phone">010-6327-9431</p>
+                                            <p class="email">wowwow19@naver.com</p>
+                                        </div>
+                                        <div class="info-picture">
+                                            <img alt="" src="img/profile.jpg">
+                                        </div>
+                                    </li>
+                                    <li class="tool-tip">
+                                        <div class="tool-tip-bubble mr-auto text-center">모두 체크해주세요</div>
+                                    </li>
+                                    <li class="info-middle">
+                                        <div class="slogan">
+                                            <div class="slogan-left">
+                                                <i class="far fa-check-circle check-btn"></i>
+                                                <span class="slogan-text d-inline">학력 및 경력</span>
+                                            </div>
+                                            <div class="slogan-right">
+                                                <span class="slogan-more-btn"><i class="fas fa-sort-down"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="slogan-detail">
+                                            <ul class="pl-5">
+                                                <li><p>2021.2. 충북대학교 졸업</p></li>
+                                                <li><p>2021.6. 국비학원 개발자 과정 수료</p></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="info-middle">
+                                        <div class="slogan">
+                                            <div class="slogan-left">
+                                                <i class="far fa-check-circle check-btn"></i>
+                                                <span class="slogan-text">보유자격증</span>
+                                            </div>
+                                            <div class="slogan-right">
+                                                <span class="slogan-more-btn"><i class="fas fa-sort-down"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="slogan-detail">
+                                            <ul class="pl-5">
+                                                <li><p>2020. 2. 한국사능력검정시험 1급 취득</p></li>
+                                                <li><p>2020. 11. 정보처리기사 취득</p></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="info-middle">
+                                        <div class="slogan">
+                                            <div class="slogan-left">
+                                                <i class="far fa-check-circle check-btn"></i>
+                                                <span class="slogan-text">지원분야</span>
+                                            </div>
+                                            <div class="slogan-right">
+                                                <span class="slogan-more-btn"><i class="fas fa-sort-down"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="slogan-detail">
+                                            <ul class="pl-5">
+                                            <li><p>프론트엔드(html, css, javascript)</p></li>
+                                            <li><p>백엔드(javascript, spring, oracle)</p></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="slide" id="slide2" data-anchor="slide2">
-                            <h2 class="text-left">환영합니다!</h2>
-                            <h3 class="text-left">제 소개를 시작합니다.</h3>
+                        
+                        <!-- 슬라이드 3 -->
+                        <div class="slide" id="slide3" data-anchor="slide3">
+                            <div class="slide-content">
+                                <div class="info">
+                                    <div class="info-top mb-2">
+                                        <div class="info-name">
+                                            <span>보유기술</span>
+                                        </div>
+                                    </div>
+                                    <div class="info-middle">
+                                        <ul class="tech-list">
+                                            <li>
+                                                <div class="tech-name">
+                                                    <span><i class="fab fa-java text-dark mx-2"></i> Java</span>
+                                                </div>
+                                                <div class="tech-deg">
+                                                    <img src="img/icons/signal-wifi-3-fill.svg" alt="" class="wifi-icon mb-1 mx-2">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="tech-name">
+                                                    <span><i class="fab fa-html5 text-danger mx-2"></i> HTML</span>
+                                                </div>
+                                                <div class="tech-deg">
+                                                    <img src="img/icons/signal-wifi-3-fill.svg" alt="" class="wifi-icon mb-1 mx-2">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="tech-name">
+                                                    <span><i class="fab fa-css3-alt text-primary mx-2"></i> CSS</span>
+                                                </div>
+                                                <div class="tech-deg">
+                                                    <img src="img/icons/signal-wifi-fill.svg" alt="" class="wifi-icon mb-1 mx-2">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="tech-name">
+                                                    <span><i class="fab fa-js text-warning mx-2"></i> Javascript & Jquery</span>
+                                                </div>
+                                                <div class="tech-deg">
+                                                    <img src="img/icons/signal-wifi-2-fill.svg" alt="" class="wifi-icon mb-1 mx-2">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="tech-name">
+                                                    <span><i class="fas fa-leaf text-success mx-2"></i> Spring framework</span>
+                                                </div>
+                                                <div class="tech-deg">
+                                                    <img src="img/icons/signal-wifi-2-fill.svg" alt="" class="wifi-icon mb-1 mx-2">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="tech-name">
+                                                    <span><i class="fas fa-database mx-2"></i> Oracle SQL</span>
+                                                </div>
+                                                <div class="tech-deg">
+                                                    <img src="img/icons/signal-wifi-2-fill.svg" alt="" class="wifi-icon mb-1 mx-2">
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 슬라이드 4 -->
+                            <div class="slide" id="slide4" data-anchor="slide4">
+                                <div class="slide-content">
+                                    <div class="app-drawer">
+                                        <ul>
+                                            <li class="tool-tip">
+                                                <div class="tool-tip-bubble mr-auto text-center">클릭하면 프로젝트 페이지로 이동합니다</div>
+                                            </li>        
+                                            <li class="place-now">
+                                                <button class="btn app-icon" disabled>
+                                                    <img src="img/logo-dark.png" alt="">
+                                                </button>
+                                                <div class="app-name mt-1">
+                                                    <div class="progress border d-none" style="height: 10px;">
+                                                        <div class="progress-bar progress-bar-animated bg-dark" style="width: 10%; height: 10px;"></div>
+                                                    </div>
+                                                    <p class="d-none">플레이스나우</p>
+                                                </div>
+                                            </li>
+                                            <li class="hyeyum">
+                                                <button class="btn app-icon" disabled>
+                                                    <img src="img/그림3.png" alt="">
+                                                </button>
+                                                <div class="app-name mt-1">
+                                                    <div class="progress border d-none" style="height: 10px;">
+                                                        <div class="progress-bar progress-bar-animated bg-dark" style="width: 10%; height: 10px;"></div>
+                                                    </div>
+                                                    <p class="d-none">혜윰</p>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btm-btn">
+                            <div class="slide-btn row text-primary col-12 text-center mx-0 d-none">
+                                <div class="mr-auto prev-btn"><button class="btn btn-link text-primary d-none">이전</button></div>
+                                <div class="ml-auto next-btn"><button class="btn btn-link text-primary">다음</button></div>
+                            </div>
+                            <div class="dock-bar row col-lg-12 px-0 py-1 d-none">
+                                <ul class="text-center">
+                                    <li><button class="btn d-flex align-items-center p-0 justify-content-center text-light call-app">
+                                            <i class="fas fa-phone"></i>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="btn d-flex align-items-center p-0 justify-content-center text-light address-app">
+                                            <i class="fas fa-address-book align-middle"></i>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="btn d-flex align-items-center p-0 justify-content-center text-light setting-app">
+                                            <i class="fas fa-cog"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -104,17 +311,154 @@
 
     <!-- Fullpage -->
     <script type="text/javascript">
+        var welcomeStrs = ["환영합니다!", "Welcome!", "歓迎致します!", "欢迎光临!", "Bienvenue!", "Willkommen!", "Benvenuto!"];
+        var i = 0;
+        var page = 0;
+        var flag = false;
+
         $(document).ready(function() {
             $('#fullpage').fullpage({
                 'controlArrows': false,
-                'anchors': ['firstPage', 'secondPage', 'thirdPage']
+                'anchors': ['page'],
+                continuousHorizontal: false,
+                onSlideLeave : function() {
+                    console.log("current page: " + page);
+
+                    if(page == 0) {
+                        $(".prev-btn button").addClass("d-none");
+                        $(".next-btn button").prop("disabled", false);
+                    }
+
+                    // slide 2 진입시
+                    if(page == 1) {
+                        $(".top-bar").removeClass("d-none");
+                        $(".next-btn button").text("다음");
+                        if(!flag) {
+                            $(".prev-btn button").removeClass("d-none");
+                            $(".next-btn button").prop("disabled", true);
+                        }
+                    }
+
+                    // slide 3 진입시
+                    if(page == 2) {
+                        $(".next-btn button").text("완료");
+                        setTimeout(() => {
+                            $(".tech-list").slideDown(700, 'swing');
+                        }, 500);
+                    }
+
+                    // slide 4 진입시
+                    if(page == 3) {
+                        $(".frame-background").css("opacity", ".1");
+                        $(".slide-btn").addClass("d-none");
+                        $(".dock-bar").removeClass("d-none");
+                        $(".progress").removeClass("d-none");
+
+                        setTimeout(() => {
+                            $(".app-icon").prop("disabled", false);
+                            $(".progress").addClass("d-none");
+                            $(".app-name p").removeClass("d-none");
+                        }, 5000);
+                    }
+                }
             });
         });
 
         setTimeout(() => {
             $(".loading").hide();
             $(".welcome").show();
+            $(".slide-btn").removeClass("d-none");
+            $(".welcome .main-title").text(welcomeStrs[i++]);
+            setInterval(() => {
+                $(".welcome .main-title").css("animation", "fade-out 1s ease");
+                setTimeout(() => {
+                    $(".welcome .main-title").text(welcomeStrs[i++]).css("animation", "fade-in 1s ease");
+                }, 500);
+                if(i >= welcomeStrs.length) i = 0;
+            }, 3000);
         }, 5000);
+
+        getTime();
+        setInterval(() => {
+            getTime();
+        }, 1000);
+
+        $(".check-btn").click(function() {
+            flag = true;
+
+            $(this).toggleClass("fas far").css("transition", ".5s");
+
+            if($(this).hasClass("fas")) {
+                $(this).css("color", "#77f");
+            } else {
+                $(this).css("color", "#eee");
+            }
+
+            $(".check-btn").each(function() {
+                if($(this).hasClass("far")) {
+                    flag = false;
+                }
+            });
+            
+            if(flag) {
+                $(".next-btn button").prop("disabled", false);
+            } else {
+                $(".next-btn button").prop("disabled", true);
+            }
+        });
+
+        $(".slogan-more-btn").off().click(function() {
+            var icon = $(this).children();
+            $(".slogan-more-btn i").not(icon).each(function() {
+                $(this).removeClass("fa-sort-up").addClass("fa-sort-down");
+                $(this).closest(".slogan").next().slideUp();
+            });
+            icon.toggleClass("fa-sort-down fa-sort-up");
+            if(icon.hasClass("fa-sort-down")) {
+                icon.css("margin-top", "0px");
+                $(this).closest(".slogan").next().slideUp();
+            } else {
+                icon.css("margin-top", "15px");
+                $(this).closest(".slogan").next().slideDown();
+            }
+
+        });
+
+        $(".next-btn").click(function() {
+            if(!$(this).children().prop("disabled")) {
+                var url = "#page/" + (++page);
+                window.location.href = url;
+            }
+        });
+
+        $(".prev-btn").click(function() {
+            if(!$(this).children().prop("disabled")) {
+                var url = "#page/" + (--page);
+                window.location.href = url;
+            }
+        });
+
+        $(".place-now").click(function() {
+            window.open('http://pn.place-now.co.kr', '_blank');
+        });
+
+        $(".hyeyum").click(function() {
+            window.open('http://hy.place-now.co.kr', '_blank');
+        });
+
+        function getTime() {
+            const time = new Date();
+            const hour = time.getHours();
+            const minutes = time.getMinutes();
+            const seconds = time.getSeconds();
+            
+            var currentTime = $(".current-time");
+            var str = `${hour<10 ? `0${hour}`:hour}:${minutes<10 ? `0${minutes}`:minutes}`;
+
+            currentTime.text(str);
+        }
+
+        
     </script>
     
 </body>
